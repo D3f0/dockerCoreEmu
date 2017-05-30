@@ -17,7 +17,7 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 RUN wget http://downloads.pf.itd.nrl.navy.mil/core/packages/4.8/core-daemon_4.8-0ubuntu1_trusty_amd64.deb && \
-    dpgk -i core-daemon_4.8-0ubuntu1_trusty_amd64.deb && rm -rf core-daemon_4.8-0ubuntu1_trusty_amd64.deb
+    dpkg -i core-daemon_4.8-0ubuntu1_trusty_amd64.deb && rm -rf core-daemon_4.8-0ubuntu1_trusty_amd64.deb
 
 RUN wget http://downloads.pf.itd.nrl.navy.mil/core/packages/4.8/core-gui_4.8-0ubuntu1_trusty_all.deb && \
     dpkg -i core-gui_4.8-0ubuntu1_trusty_all.deb && rm -rf core-gui_4.8-0ubuntu1_trusty_all.deb
