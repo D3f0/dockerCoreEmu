@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 MAINTAINER Stuart Marsden <stuartmarsden@finmars.co.uk>
 ENV WIDTH 1920
 ENV HEIGHT 1080
+ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && \
     apt-get install -qq -y xvfb x11vnc x11-apps \
