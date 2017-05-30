@@ -8,8 +8,8 @@ RUN apt-get update && \
                            wget libjbig0 libtcl8.5 libtiff5 libtk-img libtk8.5 tcl8.5 tk8.5 \
                            openbox \
                            bridge-utils ebtables iproute libev4 libev-dev python libxml2 \
-                           libprotobuf8 python-protobuf libpcap0.8 libpcre3 libuuid1 \
-                           libace-6.0.3 python-lxml python-setuptools \
+                           libprotobuf9v5 python-protobuf libpcap0.8 libpcre3 libuuid1 \
+                           libace-6.3.3 python-lxml python-setuptools \
                            traceroute mgen openssh-server iperf tcpdump wireshark && \
     apt-get autoclean && \
     apt-get autoremove && \
