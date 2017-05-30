@@ -22,6 +22,11 @@ RUN wget http://downloads.pf.itd.nrl.navy.mil/core/packages/4.8/core-daemon_4.8-
 RUN wget http://downloads.pf.itd.nrl.navy.mil/core/packages/4.8/core-gui_4.8-0ubuntu1_trusty_all.deb && \
     dpkg -i core-gui_4.8-0ubuntu1_trusty_all.deb && rm -rf core-gui_4.8-0ubuntu1_trusty_all.deb
 
+RUN apt-get update && apt-get install -qq -y logrotate && \
+    apt-get autoclean && \
+    apt-get autoremove && \
+    rm -rf /var/lib/apt/lists/*
+
 RUN wget http://downloads.pf.itd.nrl.navy.mil/ospf-manet/quagga-0.99.21mr2.2/quagga-mr_0.99.21mr2.2_amd64.deb && \
     dpkg -i quagga-mr_0.99.21mr2.2_amd64.deb && rm -rf quagga-mr_0.99.21mr2.2_amd64.deb
 
